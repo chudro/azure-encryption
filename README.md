@@ -199,7 +199,7 @@ Enter the following into the file, then save it:
 
 ```
 [connection]
-hostname = dc1vm0vm.eastus.cloudapp.azure.com
+hostname = dc1vm0vm.region.app.azure.com
 port = 9042
 
 [tracing]
@@ -337,7 +337,7 @@ Finally, register the cluster to Opscenter:
 
 Web Browser:
 ```
-https://your.azure.instance:8443/opscenter/login.html?timeout=1
+https://your.azure.opscenter.instance:8443/opscenter/login.html?timeout=1
 login: admin
 password: admin
 ```
