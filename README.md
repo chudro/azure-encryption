@@ -1,5 +1,4 @@
 # Azure Encryption
-# ================
 
 This document provides details on the steps it takes to setup Encryption in DataStax Enterprise.  It provides instructions for:
 
@@ -361,9 +360,9 @@ CA Certificate File Path: /usr/share/opscenter/ssl/opscenter_user1.pem
 Keystore File Path: /etc/dse/cassandra/ssl/.keystore
 
 Keystore Password: cassandra
+```
 
 Click on Save Cluster.
-```
 
 
 
