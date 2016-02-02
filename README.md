@@ -58,10 +58,10 @@ On the node that will be eventually used to identify the cluster when setting up
 
 The first key generation commands assume the following entries.  Please adjust to your needs:
 
-*** CN=<dcname>
-*** OU=<org unit name>
-*** O=<org name>
-*** C=<country>
+* CN=<dcname>
+* OU=<org unit name>
+* O=<org name>
+* C=<country>
 
 Also, assuming the password is “cassandra”.
 
