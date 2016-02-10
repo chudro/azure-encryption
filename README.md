@@ -141,7 +141,7 @@ First modify the client encryption section as follows.
 ```
 client_encryption_options:
   enabled: true
-  #require_client_auth: true
+  require_client_auth: true
   keystore: /etc/dse/cassandra/ssl/.keystore
   truststore: /etc/dse/cassandra/ssl/.truststore
   algorithm: SunX509
@@ -217,7 +217,7 @@ usercert = /etc/dse/cassandra/ssl/dc1vm0.cer.pem
 To run cqlsh with ssl turned on:
 
 ```
-# cqlsh --ssl
+# cqlsh --ssl 
 ```
 
 
