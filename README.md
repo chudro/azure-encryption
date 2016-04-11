@@ -6,6 +6,9 @@ This document provides details on the steps it takes to setup Encryption in Data
 1. Client to Cluster Encryption
 1. Opscenter to Cluster Encryption
 
+# Assumptions
+The cluster that this document references is a 3 DC installation with 4 nodes in each DC. This is also assuming you are working with DSE 4.8.  This should be the same with all versions of 4.X.  
+
 ### Here are the instructions:
 # Client/Node to Node Encryption
 
