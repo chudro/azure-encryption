@@ -173,7 +173,7 @@ server_encryption_options:
 Restart DSE on all nodes, after DSE has been stopped:
 
 ```
-# sudo dse cassandra
+# sudo dse cassandra restart
 ```
 
 ## Step 6 - Create Certificate and Key for Client to Node encryption
