@@ -68,11 +68,12 @@ The first key generation commands assume the following entries.  Please adjust t
 
 Also, assuming the password is “cassandra”.
 
-Perform this in the ssl directory, if you wish to create this directory.  There are also default settings that can be used. Then generate the keystore.
+Perform this in the ssl directory, if you wish to create this directory (not a requirement).  There are also default settings that can be used. Then generate the keystore.
 
 ```
 # mkdir /etc/dse/cassandra/ssl
 # cd /etc/dse/cassandra/ssl
+# chmod 777 /etc/dse/cassandra/ssl
 
 # keytool -genkey -keyalg RSA -alias dc1vm0 -keystore .keystore -storepass cassandra -keypass cassandra -dname "CN=dc1vm0, OU=SSL-verification-cluster, O=Datastax, C=US"
 # keytool -genkey -keyalg RSA -alias dc1vm1 -keystore .keystore -storepass cassandra -keypass cassandra -dname "CN=dc1vm1, OU=SSL-verification-cluster, O=Microsoft, C=US"
@@ -185,6 +186,11 @@ The following commands will create the required certificate and key on a node to
 # keytool -importkeystore -srckeystore .keystore -destkeystore dc1vm0.p12 -deststoretype PKCS12 -srcstorepass cassandra -deststorepass cassandra
 # openssl pkcs12 -in dc1vm0.p12 -nokeys -out dc1vm0.cer.pem -passin pass:cassandra
 # openssl pkcs12 -in dc1vm0.p12 -nodes -nocerts -out dc1vm0.key.pem -passin pass:cassandra
+```
+Make sure permissions are ok for the files.
+
+```
+# chmod 666 dc1vm0.cer.pem dc1vm0.key.pem
 ```
 
 ## Step 7 - Setup cqlshrc
