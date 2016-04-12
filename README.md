@@ -258,7 +258,7 @@ Next, copy the resulting cert/key file to the Opscenter node:
 
 ## Step 2 - Setup agentKeyStore and distribute
 
-Now create the agentKeyStore that will be used by the agents on all nodes:
+Now create the agentKeyStore, on the OpsCenter node, that will be used by the agents on all nodes:
 
 ```
 # cd /usr/share/opscenter
