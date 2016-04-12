@@ -235,11 +235,11 @@ To run cqlsh with ssl turned on:
 ## Step 1 - Setup opscenter key and certificate
 
 First, setup the opscenter key and certificate on the node where you created the Keystore and Truststore.
-
+(NOTE: The third command below should have an option "-nodes". Currently this is not working with openssl v0.16, yet is a viable option)
 ```
 # cd /etc/dse/cassandra/ssl
-# keytool -importkeystore -srckeystore .keystore -destkeystore opscenter_user1.p12 -deststoretype PKCS12
-# openssl pkcs12 -in opscenter_user1.p12 -out opscenter_user1.pem –nodes
+# sudo keytool -importkeystore -srckeystore .keystore -destkeystore opscenter_user1.p12 -deststoretype PKCS12
+# sudo openssl pkcs12 -in opscenter_user1.p12 -out opscenter_user1.pem
 
 # sudo keytool -genkey -alias opscenter -keyalg RSA -keystore opscenter.keystore
 # sudo keytool -import -v -trustcacerts -alias dc1vm0 -file dc1vm0.cer -keystore opscenter.keystore
@@ -262,7 +262,7 @@ Now create the agentKeyStore, on the OpsCenter node, that will be used by the ag
 
 ```
 # cd /usr/share/opscenter
-# bin/setup.py
+# sudo bin/setup.py
 ```
 
 The resulting files will be created in the /usr/share/opscenter/ssl directory.  Copy the agentKeyStore to all nodes as follows:
