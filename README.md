@@ -320,7 +320,7 @@ ssl_keystore_password: cassandra
 
 [cassandra]
 seed_hosts = 10.1.1.5
-ssl_ca_certs: /usr/share/opscenter/ssl/opscenter_user1.pem
+ssl_ca_certs = /usr/share/opscenter/ssl/opscenter_user1.pem
 ssl_client_pem = /usr/share/opscenter/ssl/opscenter.pem
 ssl_client_key = /usr/share/opscenter/ssl/opscenter.key
 ssl_validate = True
