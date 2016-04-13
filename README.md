@@ -250,10 +250,12 @@ First, setup the opscenter key and certificate on the node where you created the
 # sudo openssl pkcs12 -in opscenter.p12  -nodes -nocerts -out opscenter.key
 ```
 
-Next, copy the resulting cert/key file to the Opscenter node:
+Next, copy the resulting cert/key files to the Opscenter node:
 
 ```
 # scp opscenter_user1.pem dse@10.0.1.5:/usr/share/opscenter/ssl
+# scp opscenter.pem dse@10.0.1.5:/usr/share/opscenter/ssl
+# scp opscenter.key dse@10.0.1.5:/usr/share/opscenter/ssl
 ```
 
 ## Step 2 - Setup agentKeyStore and distribute
@@ -351,9 +353,9 @@ login: admin
 password: admin
 ```
 
-Now go to SETTINGSCluster Connections
+Now go to SETTINGS-->Cluster Connections
 
-Her are the entries:
+Here are the entries:
 
 ```
 Enter at least one host / IP in the cluster (newline delimited)
